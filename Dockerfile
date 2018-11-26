@@ -1,7 +1,7 @@
 FROM debian:latest
 
 
-RUN apt-get install apache2 php5 libapache2-mod-php5 mysql-server-5.5 wget unzip -y
+RUN apt-get install apache2 php-mysql php libapache2-mod-php mysql-server-5.5 wget unzip -y
 
 RUN echo "mysql-server-5.5 mysql-server/root_password password root"
 
