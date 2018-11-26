@@ -4,4 +4,4 @@ RUN apt-get update
 
 RUN apt-get install -y tzdata
 
-RUN apt-get install apache2 libapache2-mod-php php-cli php-commmon php-mbstring php-gd php-intl php-xml php-mysql phpzip php-curl php-xmlrpc -y
+RUN apt-get install apache2 libapache2-mod-php php-cli php-common php-mbstring php-gd php-intl php-xml php-mysql php-zip php-curl php-xmlrpc -y
