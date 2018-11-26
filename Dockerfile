@@ -2,13 +2,11 @@ FROM ubuntu:18.04
 
 RUN apt-get update 
 
-RUN apt-get upgrade 
-
-RUN echo "mysql-server-5.5 mysql-server/root_password password root"
-
-RUN echo "mysql-server-5.5 mysql-server/root_password password root"
-
 RUN apt-get install apache2 php5 libapache2-mod-php5 mysql-server-5.5 wget unzip -y
+
+RUN echo "mysql-server-5.5 mysql-server/root_password password root"
+
+RUN echo "mysql-server-5.5 mysql-server/root_password password root"
 
 RUN /etc/init.d/mysql start && mysql -uroot -proot -e "create database PRESTASHOP" && mysql -uroot -proot -e "grant all on prestashop.* TO '-uroot'@'localhost'; flush privileges"
 
