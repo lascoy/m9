@@ -8,9 +8,7 @@ RUN echo "mysql-server-5.5 mysql-server/root_password password root"
 
 RUN echo "mysql-server-5.5 mysql-server/root_password password root"
 
-RUN /etc/init.d/mysql start && mysql -uroot -proot -e "create database PRESTASHOP" && 
-
-mysql -uroot -proot -e "grant all on prestashop.* TO '-uroot'@'localhost'; flush privileges"
+RUN /etc/init.d/mysql start && mysql -uroot -proot -e "create database PRESTASHOP" && mysql -uroot -proot -e "grant all on prestashop.* TO '-uroot'@'localhost'; flush privileges"
 
 RUN cd /tmp; wget https://download.prestashop.com/download/releases/prestashop_1.7.2.1.zip
 
