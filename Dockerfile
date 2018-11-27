@@ -9,3 +9,5 @@ RUN apt-get install apache2 libapache2-mod-php php-cli php-common php-mbstring p
 RUN rm -rf /etc/apache2/sites-avaible/000-default.conf
 
 ADD ./000-default.conf /etc/apache2/sites-avaible/
+
+ADD sudo systemctl apache2 restart
