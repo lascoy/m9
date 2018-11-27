@@ -10,4 +10,4 @@ RUN rm -rf /etc/apache2/sites-avaible/000-default.conf
 
 ADD ./000-default.conf /etc/apache2/sites-avaible/
 
-RUN /etc/init.d/apache2 restart
+RUN /etc/init.d/apache2 reload
