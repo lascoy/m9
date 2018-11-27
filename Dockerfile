@@ -8,4 +8,4 @@ RUN apt-get install apache2 libapache2-mod-php php-cli php-common php-mbstring p
 
 RUN rm -rf /etc/apache2/sites-avaible/000-default.conf
 
-ADD ./etc/apache2/sites-avaible/000-default.conf /etc/apache2/sites-avaible
+ADD .././etc/apache2/sites-avaible/000-default.conf /etc/apache2/sites-avaible
