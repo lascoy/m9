@@ -10,4 +10,4 @@ RUN rm -rf /etc/apache2/sites-avaible/000-default.conf
 
 ADD ./000-default.conf /etc/apache2/sites-avaible/
 
-ADD sudo systemctl apache2 restart
+RUN sudo systemctl apache2 restart
