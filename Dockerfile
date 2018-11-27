@@ -21,3 +21,7 @@ RUN apt-get install unzip -y
 RUN unzip prestashop_1.7.2.1.zip 
 
 RUN rm /var/www/html/index.html
+
+RUN chown www-data: /var/www/html
+
+RUN chmod -R 755 /var/www/html
