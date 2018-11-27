@@ -12,4 +12,6 @@ ADD ./000-default.conf /etc/apache2/sites-avaible/
 
 RUN /etc/init.d/apache2 restart
 
+RUN apt-get install wget -y
+
 RUN wget https://download.prestashop.com/download/releases/prestashop_1.7.2.1.zip
