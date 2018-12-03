@@ -3,8 +3,8 @@ services:
   web:
     image: "ubuntu:18.04"
     ports:
-      - "8080:80"
-      - "9990:443"
+      - 8080:80
+      - 9990:443
   db:
     image: mariadb
     restart: always
