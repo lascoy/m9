@@ -3,7 +3,7 @@ services:
   web:
     build: /home/ubuntu/m9
     ports:
-      - "9090:80"
+      - "9494:80"
       - "9993:443"
     volumes:
       - ./prestashop:/var/www/html
