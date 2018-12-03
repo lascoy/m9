@@ -33,4 +33,4 @@ ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 
 EXPOSE 80
-CMD apachectl -D FOREGROUND
+CMD /etc/init.d/apache2 start
