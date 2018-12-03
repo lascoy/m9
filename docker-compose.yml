@@ -5,8 +5,10 @@ services:
     ports:
       - "9090:80"
       - "9993:443"
+    volumes:
+      - ./prestashop:/var/www/html
   db:
     image: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD=password
-      MYSQL_DATABASE=prestashop
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=prestashop
