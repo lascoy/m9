@@ -1,17 +1,12 @@
-version: '3'
+version: '3.3'
 services:
   web:
-    image: "ubuntu:18.04"
+    build: ./web
     ports:
-      - 8080:80
-      - 9990:443
+      - "9090:80"
+      - "9993:443"
   db:
     image: mariadb
-    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+      MYSQL_ROOT_PASSWORD=password
+      MYSQL_DATABASE=prestashop
