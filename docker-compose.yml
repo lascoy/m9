@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   web:
-    build: /home/ubuntu/m9
+    build: ./m9
     ports:
       - "9494:80"
       - "9993:443"
