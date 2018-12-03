@@ -26,4 +26,6 @@ RUN chown www-data: /var/www/html
 
 RUN chmod -R 755 /var/www/html
 
+ENTRYPOINT ["/usr/sbin/apache2", "-k", "start"]
+
 CMD apachectl -D FOREGROUND
