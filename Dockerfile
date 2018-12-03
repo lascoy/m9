@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM php:5.5-apache
 
 RUN apt-get update
 
@@ -26,11 +26,4 @@ RUN chown www-data: /var/www/html
 
 RUN chmod -R 755 /var/www/html
 
-ENTRYPOINT ["/usr/sbin/apache2", "-k", "start"]
-
-ENV APACHE_RUN_USER www-data
-ENV APACHE_RUN_GROUP www-data
-ENV APACHE_LOG_DIR /var/log/apache2
-
-EXPOSE 80
-CMD /etc/init.d/apache2 start
+CMD apache2 -D FOREGROUND
