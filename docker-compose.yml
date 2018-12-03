@@ -3,6 +3,6 @@ services:
   web:
   build: -
   ports: 
-  - ""
+  - "80"
   redis: 
-  image: "redis:alpine"
+  image: "redis:ubuntu:18.04"
