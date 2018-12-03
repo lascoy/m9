@@ -5,8 +5,6 @@ services:
     ports:
       - "9494:80"
       - "9993:443"
-    volumes:
-      - ./prestashop:/var/www/html
   db:
     image: mariadb
     environment:
