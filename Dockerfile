@@ -25,3 +25,5 @@ RUN rm /var/www/html/index.html
 RUN chown www-data: /var/www/html
 
 RUN chmod -R 755 /var/www/html
+
+CMD service apache2 start
