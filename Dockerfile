@@ -25,7 +25,3 @@ RUN rm /var/www/html/index.html
 RUN chown www-data: /var/www/html
 
 RUN chmod -R 755 /var/www/html
-
-EXPOSE 80
-
-EXPOSE 443
